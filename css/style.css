@@ -3,3 +3,13 @@ body {
     justify-items: center;
     align-content: center;
 }
+
+#show-tweets {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    width: 98%;
+    height: 25vh;
+}
