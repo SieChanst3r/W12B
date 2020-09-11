@@ -112,8 +112,8 @@ function getTweets() {
 
             for (i = 0; i < posts.length; i++) {
                 let allTweets = document.getElementById("show-tweets");
-                allTweets.innerHTML = " ";
-
+                allTweets.innerHTML += "<h3>" + posts[i].title + "</h3>";
+                allTweets.innerHTML += "<p>" + posts[i].body + "</p>"
             }
         } else if (this.readyState != 4) {
             console.log("LOADING...");
@@ -125,7 +125,7 @@ function getTweets() {
 
     ajax.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
     ajax.setRequestHeader("Content-Type", "application/json");
-    ajax.send(JSON.stringify(tweetData));
+    ajax.send();
 }
 
 getTweets();
